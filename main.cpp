@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     if(argc != 3)
     {
         qDebug() << "input param error";
-        return 0;
+        return -1;
     }
 
     SqlStructureSync syncer(argv[1],argv[2]);
@@ -25,5 +25,5 @@ int main(int argc, char *argv[])
     syncer.startSync();
 
 
-    return a.exec();
+    return 0;
 }
